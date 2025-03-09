@@ -10,10 +10,54 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/tv_poc_header"
+        android:text="音/视频播放器POC"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="20dp" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:id="@+id/et_audio_link"
+        android:padding="5dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_poc_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_poc_header"
+        android:layout_marginTop="10dp"
+        android:hint="填入音频链接,否则将使用默认链接"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_enter_audio_detail"
+        android:padding="10dp"
+        android:text="进入音频详情页面"
+        app:layout_constraintStart_toStartOf="@+id/tv_poc_header"
+        app:layout_constraintTop_toBottomOf="@id/et_audio_link"
+        android:layout_marginTop="10dp"
+        android:background="#56ac56"/>
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:id="@+id/et_video_link"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_poc_header"
+        app:layout_constraintTop_toBottomOf="@id/btn_enter_audio_detail"
+        android:layout_marginTop="10dp"
+        android:hint="填入视频链接,否则将使用默认链接"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_enter_video_detail"
+        android:padding="10dp"
+        android:text="进入视频详情页面"
+        app:layout_constraintStart_toStartOf="@+id/tv_poc_header"
+        app:layout_constraintTop_toBottomOf="@id/et_video_link"
+        android:layout_marginTop="10dp"
+        android:background="#56ac56"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
