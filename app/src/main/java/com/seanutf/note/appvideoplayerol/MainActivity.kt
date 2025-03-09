@@ -11,7 +11,7 @@ import com.seanutf.note.appvideoplayerol.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private val defaultVideoLink = "https://www.w3schools.com/html/movie.mp4"
-    private val defaultAudioLink = "https://www.w3schools.com/html/movie.mp4"
+    private val defaultAudioLink = "http://downsc.chinaz.net/Files/DownLoad/sound1/201906/11582.mp3"
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +26,8 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnEnterAudioDetail.setOnClickListener {
             val link = binding.etAudioLink.text.toString().ifBlank {
-                defaultAudioLink
+                //defaultAudioLink
+                defaultVideoLink
             }
             enterAudioDetailPage(link)
         }
